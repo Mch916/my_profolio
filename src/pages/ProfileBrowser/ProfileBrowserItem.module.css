@@ -1,0 +1,96 @@
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.container:hover .img::after {
+  border-color: #e5e5e5;
+}
+
+.container:hover .label {
+  color: #e5e5e5;
+}
+
+.container:hover .icon {
+  background-color: #e5e5e5;
+}
+
+.img {
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 10vw;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 84px;
+  min-width: 84px;
+  position: relative;
+  text-decoration: none;
+  width: 10vw;
+}
+
+.img::after {
+  border: 0.3em solid transparent;
+  border-radius: 4px;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.label {
+  color: grey;
+  display: block;
+  font-size: 1.3vw;
+  line-height: 1.2em;
+  margin: 0.6em 0;
+  min-height: 1.8em;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.icon {
+  align-items: center;
+  border-radius: 4px;
+  color: grey;
+  display: flex;
+  font-size: 5vw;
+  height: 10vw;
+  justify-content: center;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 84px;
+  min-width: 84px;
+  text-align: center;
+  text-decoration: none;
+  width: 10vw;
+}
+
+.icon::before {
+  content: "\f055";
+  speak: none;
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: none;
+  transform: translateZ(0);
+}
+
+@media screen {
+  
+}
+
+@media(max-width: 800px){
+  .label{
+    font-size: 12px;
+  }
+}
