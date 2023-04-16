@@ -4,15 +4,15 @@
 }
 
 .container:hover .img::after {
-  border-color: #e5e5e5;
+  border-color: var(--main-white-text-color);
 }
 
 .container:hover .label {
-  color: #e5e5e5;
+  color: var(--main-white-text-color);
 }
 
 .container:hover .icon {
-  background-color: #e5e5e5;
+  background-color: var(--main-white-text-color);
 }
 
 .img {
@@ -58,6 +58,7 @@
 
 .icon {
   align-items: center;
+  background-color: #333;
   border-radius: 4px;
   color: grey;
   display: flex;
@@ -71,10 +72,12 @@
   text-align: center;
   text-decoration: none;
   width: 10vw;
+  /* transform: scale(50%,50%); */
 }
 
 .icon::before {
-  content: "\f055";
+  /* content: "\f055"; */
+  content: "+";
   speak: none;
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
@@ -83,10 +86,6 @@
   line-height: 1;
   text-transform: none;
   transform: translateZ(0);
-}
-
-@media screen {
-  
 }
 
 @media(max-width: 800px){

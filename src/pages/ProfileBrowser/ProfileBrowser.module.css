@@ -1,5 +1,5 @@
 .center-wrapper {
-  background: #141414;
+  background: var(--main-black-text-color);
   bottom: 0;
   left: 0;
   position: fixed;
@@ -19,7 +19,7 @@
 }
 
 .title {
-  color: #fff;
+  color: var(--main-white-text-color);
   font-size: 3.5vw;
   font-weight: unset;
   width: 100%;

@@ -2,14 +2,11 @@ import uuid from "react-uuid";
 import CenterWrapper from "../../components/UI/CenterWrapper";
 import classes from "./ProfileBrowser.module.css";
 import ProfileBrowserItem from "./ProfileBrowserItem";
-import hrProfileImg from "../../assets/hr.png";
-import guestProfileImg from "../../assets/guest.png";
-import developerProfileImg from "../../assets/developer.png";
 
 const DUMMY_USER = [
-  { id: uuid(), name: "Guest", icon: guestProfileImg },
-  { id: uuid(), name: "Hiring Manager", icon: hrProfileImg },
-  { id: uuid(), name: "Developer", icon: developerProfileImg },
+  { id: uuid(), name: "Guest", icon: '/images/guest.png' },
+  { id: uuid(), name: "Hiring Manager", icon: '/images/hr.png' },
+  { id: uuid(), name: "Developer", icon: '/images/developer.png' },
 ];
 
 const ProfileBrowser = () => {

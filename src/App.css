@@ -1,6 +1,14 @@
 :root{
   --main-white-text-color: #e5e5e5;
+  --main-black-text-color: #141414;
 }
+
+a, a:active{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
 
 .App {
   text-align: center;
