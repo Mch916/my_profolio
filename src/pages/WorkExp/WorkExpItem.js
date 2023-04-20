@@ -13,7 +13,7 @@ const WorkExpItem = ({ workExpData, isEven }) => {
 
   return (
     <>
-      <div className={`wx-item-wrapper ${evenClass}`}>
+      <div className={`wx-item-wrapper reveal-ele ${evenClass}`}>
         <div
           className="wx-item-hero"
           style={{ backgroundImage: `url(${workExpData.images[activeImg]})` }}
