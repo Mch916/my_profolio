@@ -1,7 +1,6 @@
 import classes from "./Button.module.css";
 
 const Button = ({ text, icon }) => {
-  console.log(icon)
   return (
     <>
       <button className={classes["btn"]}>

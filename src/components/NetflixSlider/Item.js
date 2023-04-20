@@ -18,7 +18,7 @@ const Item = ({ movie }) => (
           })}
         >
           <img src={movie.image} alt="" />
-          <ShowDetailsButton onClick={() => onSelectSlide(movie)} />
+          <ShowDetailsButton onClick={() => onSelectSlide(movie)} title={ movie.title}/>
           {isActive && <Mark />}
         </div>
       );

@@ -3,6 +3,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .main-header-container {
@@ -17,7 +18,6 @@
 .menu-navigation {
   align-items: center;
   display: flex;
-  font-size: 1.2rem;
   padding: 0 4%;
   position: relative;
   transition: background-color 0.4s;
@@ -42,17 +42,25 @@
 }
 
 .label {
-  font-weight: 500;
+  font-size: 0.8rem;
+  /* line-height: 1.2rem; */
+  font-weight: 400;
   align-items: center;
-  color: #e5e5e5;
+  /* color: #e5e5e5; */
   display: flex;
   height: 100%;
   position: relative;
   transition: color 0.4s;
+  padding: 0 0.3rem;
 }
 
 .label.active {
   color: #fff;
+  font-weight: 800;
+  /* text-decoration: underline; */
+  /* border: 1px solid white; */
+  background-color: white;
+  color: var(--main-black-text-color);
 }
 
 .second-nav {
@@ -68,9 +76,9 @@
 
 .tab-menu {
   display: block;
-  font-size: 12px;
+  /* font-size: 12px; */
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .tab-menu-btn{

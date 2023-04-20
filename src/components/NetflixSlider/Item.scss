@@ -1,7 +1,8 @@
 .item {
-  flex: 0 0 19.7%;
-  transition: transform 300ms ease 100ms;
-  margin: 0 2px;
+  // flex: 0 0 17.9vw;
+  flex: 0 0 calc((100vw * 0.90)/5);
+  transition: transform 300ms ease 100ms, z-index 300ms;
+  margin: 0 0.1rem;
   position: relative;
 
   img {
@@ -10,3 +11,16 @@
     vertical-align: top;
   }
 }
+
+@media(max-width: 1024px){
+  .item{
+    flex: 0 0 22.3vw;
+    // flex: 0 0 calc((100vw * 0.92 - 6.4px)/4);
+  }
+}
+@media(max-width: 520px){
+  .item{
+    flex: 0 0 29vw;
+  }
+}
+

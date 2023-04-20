@@ -18,9 +18,9 @@ const ProfileBrowser = () => {
           {DUMMY_USER.map((user) => (
             <ProfileBrowserItem key={user.id} user={user} isAddUser={false}/>
           ))}
-          <ProfileBrowserItem isAddUser={true} />
+          {/* <ProfileBrowserItem isAddUser={true} /> */}
         </div>
-        <div className={classes['edit-btn']}>Manage Profile</div>
+        {/* <div className={classes['edit-btn']}>Manage Profile</div> */}
       </CenterWrapper>
     </>
   );

@@ -10,10 +10,11 @@ const useSliding = (elementWidth, countElements) => {
   const [viewed, setViewed] = useState(0);
 
   useEffect(() => {
-    const containerWidth = containerRef.current.clientWidth - PADDINGS;
+    const containerWidth = containerRef.current.clientWidth * 0.92;
+    const itemViewWidth = Math.floor(containerWidth / elementWidth);
 
     setContainerWidth(containerWidth);
-    setTotalInViewport(Math.floor(containerWidth / elementWidth));
+    setTotalInViewport(itemViewWidth);
   }, [containerRef.current]);
 
   const handlePrev = () => {

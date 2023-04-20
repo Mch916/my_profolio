@@ -1,18 +1,17 @@
-@import-normalize;
-
 * {
   box-sizing: border-box;
 }
 
 :root {
-  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
-  font-size: 11px;
-  line-height: 1.2;
-  font-weight: 400;
+  /* font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 300;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: rgb(20, 20, 20);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -39,6 +38,12 @@
   --color-primary-700: #fbc14d;
   --color-primary-800: #fab833;
   --color-primary-900: #f6ad1b;
+
+  --main-white-text-color: #e5e5e5;
+  --main-black-text-color: rgb(20, 20, 20);
+  --main-grey-text-color: rgb(40, 40, 40);
+
+  
 }
 
 body {
@@ -49,4 +54,28 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 1084px) {
+  :root{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 784px) {
+  :root{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  :root{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+  }
 }

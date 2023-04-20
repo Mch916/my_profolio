@@ -1,0 +1,45 @@
+.reveal-container{
+  position: relative;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: 0.8s all ease;
+}
+
+.reveal-container.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.bg-name {
+  font-weight: 700;
+  position: relative;
+  color: transparent;
+  padding: 0 1rem;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, orange 50%, transparent 50%);
+  transition: all 500ms cubic-bezier(.47, .1, 1, .63) ;
+}
+
+.bg-name.active{
+  background-size: 200% 100%;
+  color: orange;
+  background-image: linear-gradient(to right, orange 48%, transparent 50%);
+  /* transition: background-position 1s cubic-bezier(.47, .1, 1, .63); */
+  animation: slideColorBackground 300ms cubic-bezier(.47, .1, 1, .63) forwards;
+}
+
+@keyframes slideColorBackground {
+  0%{
+    background-position: 0 0;
+    color:transparent; 
+  }
+  99%{
+    color:transparent; 
+  }
+  100%{
+    background-position: -100% 0;
+    color:orange; 
+
+  }
+}
