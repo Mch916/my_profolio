@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { IDENTITY } from "../../pages/ProfileBrowser/ProfileBrowser";
 import HomeContext from "../../store/HomeContext";
 import useWindowScroll from "../hooks/useWindowScroll";
 import classes from "./MainHeader.module.css";
@@ -8,6 +9,8 @@ const MainHeader = () => {
   const [pos, isTop] = useWindowScroll();
   const [bgColor, setBgColor] = useState("transparent");
   const homeCtx = useContext(HomeContext);
+  const identity = IDENTITY.find(({ id }) => id === homeCtx.identity);
+  const identityImg = identity.icon;
 
   useEffect(() => {
     // console.log("isTop");
@@ -19,6 +22,11 @@ const MainHeader = () => {
 
     return () => {};
   }, [isTop]);
+
+  const moveToViewHandler = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({behavior: 'smooth'})
+  }
 
   
 
@@ -32,13 +40,13 @@ const MainHeader = () => {
           >
             <ul className={classes["tab-navigation"]}>
               <li className={classes["nav-tab"]}>
-                <div className={`${classes["label"]} ${homeCtx.activePage == 'home' ? classes['active'] : ''}`} >Home</div>
+                <div className={`${classes["label"]} ${homeCtx.activePage == 'home' ? classes['active'] : ''}`} onClick={()=>moveToViewHandler('home')}>Home</div>
               </li>
               <li className={classes["nav-tab"]}>
-                <div className={`${classes["label"]} ${homeCtx.activePage == 'about' ? classes['active'] : ''}`}>About Me</div>
+                <div className={`${classes["label"]} ${homeCtx.activePage == 'about' ? classes['active'] : ''}`} onClick={()=>moveToViewHandler('about')}>About Me</div>
               </li>
               <li className={classes["nav-tab"]}>
-                <div className={`${classes["label"]} ${homeCtx.activePage == 'work' ? classes['active'] : ''}`}>Work Exp</div>
+                <div className={`${classes["label"]} ${homeCtx.activePage == 'work' ? classes['active'] : ''}`} onClick={()=>moveToViewHandler('work')}>Work Exp</div>
               </li>
               {/* <li className={classes["nav-tab"]}>
                 <div className={`${classes["label"]} ${homeCtx.activePage == 'contact' ? classes['active'] : ''}`}>Contact</div>
@@ -54,7 +62,7 @@ const MainHeader = () => {
                       <span>
                         <img
                           className={classes["profile-icon"]}
-                          src="/images/developer.png"
+                          src={identityImg}
                         />
                       </span>
                     </Link>

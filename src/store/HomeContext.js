@@ -1,7 +1,8 @@
 import React from "react";
 
 const HomeContext = React.createContext({
-  activePage: 'home'
+  activePage: 'home',
+  identity: 'dev'
 })
 
 

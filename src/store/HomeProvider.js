@@ -2,13 +2,21 @@ import { useReducer } from "react";
 import HomeContext from "./HomeContext";
 
 const initState = {
-  activePage: 'home'
+  activePage: 'home',
+  identity: 'dev'
 }
 
 const homeReducer = (state, action) => {
-  if (action.type === 'UPDATE') {
+  if (action.type === 'setPage') {
     return {
+      ...state,
       activePage: action.page
+    }
+  }
+  if (action.type === 'setIdentity') {
+    return {
+      ...state,
+      identity: action.identity
     }
   }
 
@@ -19,13 +27,19 @@ const HomeProvider = ({children}) => {
   const [homeState, dispatchHomeAction] = useReducer(homeReducer, initState);
 
   const setPageHandler = (page) => {
-    
-    dispatchHomeAction({ type: 'UPDATE', page: page });
+
+    dispatchHomeAction({ type: 'setPage', page: page });
+  }
+  const setIdentityHandler = (identity) => {
+
+    dispatchHomeAction({ type: 'setIdentity', identity: identity });
   }
 
   const homeContext = {
     activePage: homeState.activePage,
-    setPage: setPageHandler
+    identity: homeState.identity,
+    setPage: setPageHandler,
+    setIdentity: setIdentityHandler,
   };
   return (
     <>

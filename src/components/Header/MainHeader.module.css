@@ -52,6 +52,7 @@
   position: relative;
   transition: color 0.4s;
   padding: 0 0.3rem;
+  cursor: pointer;
 }
 
 .label.active {
