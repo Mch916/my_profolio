@@ -1,4 +1,6 @@
-const MySliderItem = ({image, title}) => {
+import './MySlider.css'
+
+const MySliderItem = ({ image, title }) => {
   return (
     <>
       <div className="my-slider-item">

@@ -7,7 +7,7 @@ import ErrorPage from "./pages/Error/ErrorPage";
 import HomeProvider from "./store/HomeProvider";
 
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,

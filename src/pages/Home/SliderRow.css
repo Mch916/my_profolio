@@ -31,7 +31,7 @@
   color: transparent;
   background-position: 0 0;
   background-size: 200% 100%;
-  background-image: linear-gradient(to right, orange 50%, transparent 50%);
+  background-image: linear-gradient(to right, orange 48%, transparent 50%);
   transition: all 800ms cubic-bezier(.47, .1, 1, .63);
 }
 
@@ -56,14 +56,14 @@
 }
 
 @media only screen and (max-width: 1084px) {
-  .slider-title{
+  .slider-title span{
     padding-left: 6vw;
   }
 
 }
 
 @media only screen and (max-width: 784px) {
-  .slider-title{
+  .slider-title span{
     padding-left: 7vw;
   }
 
@@ -77,7 +77,7 @@
   .main-view{
     transform: translateY(-30%);
   }
-  .slider-title{
+  .slider-title span{
     padding-left: 8vw;
   }
 }
