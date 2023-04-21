@@ -18,42 +18,42 @@ import './Home.css';
 const programming = [
   {
     id: "p1",
-    image: "/images/javascript.webp",
+    image: "images/javascript.webp",
     title: "Javascript",
   },
   {
     id: "p2",
-    image: "/images/python.jpg",
+    image: "images/python.jpg",
     title: "Python",
   },
   {
     id: "p3",
-    image: "/images/php.png",
+    image: "images/php.png",
     title: "PHP",
   },
   {
     id: "p4",
-    image: "/images/java.jpeg",
+    image: "images/java.jpeg",
     title: "Java",
   },
   {
     id: "p5",
-    image: "/images/html.jpeg",
+    image: "images/html.jpeg",
     title: "HTML",
   },
   {
     id: "p6",
-    image: "/images/css.webp",
+    image: "images/css.webp",
     title: "CSS",
   },
   {
     id: "p7",
-    image: "/images/mysql.webp",
+    image: "images/mysql.webp",
     title: "MySQL",
   },
   {
     id: "p8",
-    image: "/images/oracle.jpeg",
+    image: "images/oracle.jpeg",
     title: "Oracle",
   },
 ];
@@ -61,27 +61,27 @@ const programming = [
 const framework = [
   {
     id: "f1",
-    image: "/images/laravel.jpeg",
+    image: "images/laravel.jpeg",
     title: "Laravel",
   },
   {
     id: "f2",
-    image: "/images/react.jpeg",
+    image: "images/react.jpeg",
     title: "React",
   },
   {
     id: "f3",
-    image: "/images/flask.png",
+    image: "images/flask.png",
     title: "Flask",
   },
   {
     id: "f4",
-    image: "/images/codeigniter.jpeg",
+    image: "images/codeigniter.jpeg",
     title: "CodeIgniter",
   },
   {
     id: "f5",
-    image: "/images/jQuery.webp",
+    image: "images/jQuery.webp",
     title: "jQuery",
   },
 ];
@@ -89,32 +89,32 @@ const framework = [
 const devops = [
   {
     id: "d0",
-    image: "/images/aws.webp",
+    image: "images/aws.webp",
     title: "AWS",
   },
   {
     id: "d1",
-    image: "/images/git.png",
+    image: "images/git.png",
     title: "Git",
   },
   {
     id: "d2",
-    image: "/images/github.webp",
+    image: "images/github.webp",
     title: "GitHub",
   },
   {
     id: "d3",
-    image: "/images/gitlab.jpeg",
+    image: "images/gitlab.jpeg",
     title: "Gitlab",
   },
   {
     id: "d4",
-    image: "/images/docker.png",
+    image: "images/docker.png",
     title: "Docker",
   },
   {
     id: "d5",
-    image: "/images/cypress.png",
+    image: "images/cypress.png",
     title: "Cypress",
   },
 ];
@@ -155,7 +155,7 @@ const Home = () => {
       <div className={`${classes["bg-container"]} reveal-ele nav-reveal`} id="home">
         {/* <img
           className={classes["bg-img"]}
-          src="/images/bg03.jpg"
+          src="images/bg03.jpg"
           alt="Background"
         /> */}
         <div className={classes["bg-info-container"]}>
@@ -167,7 +167,7 @@ const Home = () => {
               <div>
                 <img
                   className={classes["bg-info-img"]}
-                  src="/images/profilepic.jpeg"
+                  src="images/profilepic.jpeg"
                 />
               </div>
               <div className={classes["bg-info-2"]}>

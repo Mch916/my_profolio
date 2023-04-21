@@ -6,9 +6,9 @@ import classes from "./ProfileBrowser.module.css";
 import ProfileBrowserItem from "./ProfileBrowserItem";
 
 export const IDENTITY = [
-  { id: 'guest', name: "Guest", icon: '/images/guest.png' },
-  { id: 'hr', name: "Hiring Manager", icon: '/images/hr.png' },
-  { id: 'dev', name: "Developer", icon: '/images/developer.png' },
+  { id: 'guest', name: "Guest", icon: 'images/guest.png' },
+  { id: 'hr', name: "Hiring Manager", icon: 'images/hr.png' },
+  { id: 'dev', name: "Developer", icon: 'images/developer.png' },
 ];
 
 const ProfileBrowser = () => {

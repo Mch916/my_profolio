@@ -7,7 +7,7 @@ const WorkingExp = [
     title: "Hong Kong Observatory",
     description:
       "Developed an meteorological web application and Renewed static web services for retrieving real-time typhoon forecast and actual data",
-    images: ["/images/hko01.png", "/images/hko02.png"],
+    images: ["images/hko01.png", "images/hko02.png"],
     url: "https://www.hko.gov.hk/en/index.html",
   },
   {
@@ -15,7 +15,7 @@ const WorkingExp = [
     title: "CT Inc",
     description:
       "Redesigned an eCommerce web application including membership system, reward point program, social media integration and payment gateway integration",
-    images: ["/images/ct01.png", "/images/ct02.png"],
+    images: ["images/ct01.png", "images/ct02.png"],
     url: "https://www.timecigar.com/index?lang=en",
   },
   {
@@ -23,7 +23,7 @@ const WorkingExp = [
     title: "Mango Technology Consultant",
     description:
       "Designed and developed a professional web portal for Forex CFD provider offering trading solutions",
-    images: ["/images/mango01.png", "/images/mango02.png"],
+    images: ["images/mango01.png", "images/mango02.png"],
     url: "https://www.plotioglobal.com/",
   },
 ];
