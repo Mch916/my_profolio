@@ -124,29 +124,26 @@ const Home = () => {
   
   const reveal = useCallback(() => {
     var reveals = document.querySelectorAll(".reveal-ele");
-  
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementBottom = reveals[i].getBoundingClientRect().bottom;
-      var elementVisible = 50;
-      // console.log(reveals[i],windowHeight, elementTop, elementBottom, elementTop < windowHeight - elementVisible,elementBottom > 0);
-      if (elementTop < windowHeight - elementVisible && elementBottom > 0) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
-      if (elementTop < windowHeight - 300) { 
-        if (reveals[i].classList.contains('nav-reveal')) {
-          homeCtx.setPage(reveals[i].id);
-        }
 
-      }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) console.count(entry)
+        entry.target.classList.toggle("active", entry.isIntersecting);
+        if (entry.target.classList.contains('nav-reveal') && entry.isIntersecting) {
+          homeCtx.setPage(entry.target.id);
+        }
+      })
+    })
+    for (var i = 0; i < reveals.length; i++) { 
+      observer.observe(reveals[i]);
+
     }
+  
   },[])
 
   useEffect(() => {
-    window.addEventListener("scroll", reveal);
+    reveal();
+    // window.addEventListener("scroll", reveal);
   },[reveal])
 
   return (
@@ -202,7 +199,7 @@ const Home = () => {
                   <IconLeetCode />
                 </Link>
                 <Link
-                  to="facebook.com/lucas.man.mch"
+                  to="https://facebook.com/lucas.man.mch"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes["bg-info-btn"]}
